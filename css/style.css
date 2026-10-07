@@ -1,0 +1,231 @@
+/* 
+NOTE: I looked up how best to comment links and found out what a pseudoclass is! I'd heard the word, but didn't know what it meant.
+I think I'm getting a lot better at comments, and it's helping me understand how everything really works. 
+Downside: It takes me AGES. But I think once i have the style down it will go faster.
+I decided to comment my stylesheets like the example ones you provide. It seems much easier to read, and saves a bunch of copy/pasting. 
+*/
+
+
+/* BASE STYLES ------------------------------------------------------------------------------------- */
+
+/*
+body is an element selector.
+This ruleset styles the <body> section. 
+The text is sans-serif. The background is light blue. Default margins are removed.
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;     /* Default sans-serif font */
+  font-size: 1rem;                               /* Default text size */ 
+  background-color: #e0ecff;                   /* Light blue background */
+  margin: 0;                                     /* Remove default margins */
+}
+
+/* 
+h1 is an element selector.
+This ruleset styles the page's headline text. 
+Text is bold, green, sans-serif, and is horizontally centered. A small space is added below the text.
+*/
+h1 {
+  color: #008e15;     /* Makes text green */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  /* Bold, sans-serif font for headline */ 
+  font-size: 4rem;      /* Makes text larger than default */  /* Helps headeline stand out */
+  text-align: center;   /* Centers text horizontally */
+  margin: 0 0 8px;      /* Adds small space below text */
+}
+
+/* 
+h1 .blue is a descendent selector.
+This ruleset styles a <span> of text. 
+The text is blue.
+*/
+h1 .blue {
+  color: #2a8cd2;     /* Makes text blue */
+}
+
+/* 
+h2 is an element selector.
+This ruleset styles the gallery card header. 
+The text is bold, blue, and sans-serif. A margin is added around three sides.
+*/
+h2 {
+  color: #2a8cd2;      /* Makes text blue */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  /* Assigns a bold, sans-serif font for <h2> text */ 
+  font-size: 2rem;           /* Makes text larger than default */  /* helps headers stand out */
+  margin: 20px 10px 0 10px;  /* Leaves space around top and sides of header */
+}
+
+/* 
+p is an element selector.
+This ruleset styles paragraph text.
+Text is black. Line hieght is adjusted to make text more legible.
+*/
+p {
+  color:#000000;      /* Makes text black */
+  line-height: 1.5rem;  /* Widens space between lines of text */  /* Increases legibility */
+}
+
+/*
+.largetext is a class selector.
+This ruleset styles a <span> of highlighted text. 
+The text is large, sans-serif, and purple. Text is converted to uppercase.
+*/
+.largetext {
+  color:#be00b5;            /* Text is purple */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  /* Assigns a bold, sans-serif font for emphasized text */
+  font-size: 2rem;            /* Text is larger than default */ /* For emphasis */
+  text-transform: uppercase;  /* Text converted to uppercase */
+}
+
+/* LINK STYLES ------------------------------------------------------------------------------------- */
+
+/* 
+a is an element selector.
+This ruleset styles a link. 
+The link's text is bold and white. The link's default underline is removed. 
+*/
+a {
+  color:#ffffff;        /* White text */  
+  font-size: 1.2rem;      /* Text slightly larger than default */
+  font-weight: bold;      /* Bold text */
+  text-decoration: none;  /* Removes default text styling for links */  /* No underline */
+}
+
+/*
+a:hover uses the :hover pseudoclass.
+This ruleset styles the link when it is hovered over.
+On mouse hover, the link's background turns blue. 
+*/
+a:hover {
+  background-color: #2a8cd2;  /* Medium blue background */
+}
+
+/*
+a:active uses the :active pseudoclass.
+This ruleset styles the link when it is clicked. 
+On mouse click, the link's background turns purple. 
+*/
+a:active {
+  background-color: #7b3597;  /* Medium purple background */
+}
+
+
+/* GALLERY STYLES ------------------------------------------------------------------------------------- */
+
+/*
+.container is a class selector.
+This ruleset formats the gallery section. 
+The gallery cards display in a column, and are centered horizontally on the page. Space is added around the gallery.
+Text is horizintally centered.
+*/
+.container {
+  display: flex;            /* Flex container */
+  flex-direction: column;   /* MOBILE FIRST: stack items vertically */
+  justify-content: center;  /* Centers cards vertically in row */
+  max-width: 1100px;        /* Stops content stretching too wide on big screens */
+  margin: 40px auto;        /* 40px top/bottom, auto left/right = centered */
+  padding: 20px;            /* Space inside the container */
+  text-align: center;       /* Centers text content */
+}
+
+/* 
+.gallery-box is a class selector.
+This ruleset formats the gallery card layout. 
+The card's are arranged in a column using Flexbox. Cards are horizontally centered, allowed to wrap, and evenly spaced.
+*/
+.gallery-box {
+  display: flex;            /* Flex container */
+  flex-direction: column;   /* Stacks items vertically in a column */
+  flex-wrap: wrap;          /* Lets cards wrap onto new rows */
+  justify-content: center;  /* Centers cards horizontally in row */
+  gap: 20px;                /* Even spacing between items */
+  padding: 50px;            /* Space around text */
+}
+
+/* 
+.gallery-card is a class selector.
+This ruleset styles a gallery card. 
+The card has a white background, rounded corners, a small drop shadow, and space around the contained elements.
+*/
+.gallery-card {
+  background: #ffffff;     /* White background */
+  border-radius: 12px;       /* Rounded corners */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle depth */
+  padding: 20px 30px;        /* Space around text */
+}
+
+/*
+.product-button is a class selector.
+This ruleset formats the gallery links to make them look like buttons. 
+Each button is green with rounded corners, a small outline, and a subtle drop shadow. 
+*/
+.product-button {
+  display: inline-block;        /* Extends background color to bounds of the container */  /* Colors extra space around the text so it looks like a button */
+  min-width: 70%;               /* Keeps button from being too small */
+  background-color: #008e15;  /* Medium green background */
+  border: 2px solid #000000;  /* 2px black border around container */
+  border-radius: 10px;          /* Rounded edges */
+  box-shadow: 0 2px 11px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow around button */
+  margin: 0 10px 20px 10px;     /* Adds space around sides and bottom of button */
+  padding: 10px;                /* Adds space between button bounds and link text */
+}
+
+/*
+.product-button:focus-visible uses the :focus-visible pseudoclass.
+This ruleset highlights a button on tab-thru. 
+When selected, a purple outline is added around the button. Improves site accessibility.
+*/
+.product-button:focus-visible {
+  outline: 3px solid #be00b5;  /* Purple outline */  /* Visually highlights selected button */
+  outline-offset: 3px;           /* Outline is offset by 3px */  /* Leaves space between button and outline */ 
+}
+
+
+/* MEDIA QUERIES ------------------------------------------------------------------------------------- */
+
+/* 
+=========================
+  TABLET (600px and up)
+========================= 
+These styles are used when the viewport is at least 600px wide.
+The gallery cards are displayed in rows, allows up to 2 cards per row. The page background is light pink.
+*/
+@media (min-width: 600px) {
+  body { background: #fbd3dc; }  /* Background is light pink */  /* Confirms the tablet breakpoint is active */
+
+  .gallery-box {
+    flex-direction: row;           /* Stacks items vertically in a column */
+  }
+
+  .gallery-card { width: 45%; }    /* ~2 columns = 2 cards per row */  /* 45% leaves room for the gap */
+}
+
+
+/* 
+=========================
+  DESKTOP (900px and up)
+========================= 
+These styles are used when the viewport is at least 900px wide.
+The gallery layout allows up to 3 cards per row. The page background is light orange.
+*/
+@media (min-width: 900px) {
+  body { background: #fce0b3; }  /* Confirms the desktop breakpoint is active */
+
+  .gallery-card { width: 30%; }    /* ~3 columns across = 3 cards per row */  /* 30% leaves room for the gap */
+}
+
+/* 
+=========================
+LARGE DESKTOP (1200px and up)
+========================= 
+These styles are used when the viewport is at least 1200px wide.
+The gallery has a maximum width of 1600px, and allows up to 4 cards per row. The page background is light green.
+*/
+@media (min-width: 1200px) {
+  body { background: #defbc8; }  /* Confirms the large-desktop breakpoint is active */
+
+  .container { max-width: 1600px;  /* Stops content stretching too wide on big screens */
+    margin: 40px auto;             /* 40px top/bottom, auto left/right = centered */
+    padding: 20px; }               /* Space inside the container */
+
+  .gallery-card { width: 22%; }    /* ~4 columns = 4 cards per row */  /* 22% leaves room for the gap, padding, and rounding */
+}

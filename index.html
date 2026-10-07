@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+The <head> element contains information used by the browser.
+This section sets character encoding and display width, adds a page title, and links to the external CSS stylesheet.
+-->
+<head>
+    <meta charset="UTF-8">  <!--Character encoding is UTF-8-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--Sets viewport width to match device width--> <!--Used to determine which media queries, if any, should be run-->
+    <title>~~~ Responsive Layout ~~~</title>   <!--Page title -->
+    <link rel="stylesheet" href="css/style.css">   <!--Link to CSS stylsheet-->
+</head>
+
+<!-- 
+The <body> element contains the webpage's visible content.
+The <main> element contains the webpage's main content.
+The <h1> element contains the webpage's headline.
+The <p> element contains the webpage's tagline.
+The <span> element groups a selected portion of text so it can be styled separately.
+This section creates a container to hold the page's headline and tagline, and assigns the container a class. 
+<main class="container">  Assigns the "container" class to <main>.
+<h1>...</h1>  Contains the headline.
+<span class="blue">boat</span>  Assigns the class "blue" to the grouped text "boat".
+<p>...</p>  Contains the tagline.
+-->
+<body>
+    <main class="container">
+        <h1>Cactus <span class="blue">boat</span></h1>   
+        <p>Award-winning, handmade boats<br>for the discerning spikeboater</p>
+<!-- 
+The <section> element contains the featured products gallery.
+This section creates a <section> container to hold the featured products gallery and assigns it the "gallery-box" class.
+<section class="gallery-box">  Assigns the "gallery-box" class to <section>.
+-->
+        <section class="gallery-box">
+<!--
+Each <article> element contains one featured product card.
+Each <h2> element contains a product's name.
+Each <p> element contains a product's description.
+The <span> element groups a selected portion of text so it can be styled separately.
+Each <a> element contains a link to the product's sale page.
+This section creates featured product cards, and assigns each card a class. 
+Each card contains a product name, a short product description, and a link to the product's sale page.
+<article class="gallery-card">  Assigns the "gallery-card" class to <article>. 
+<h2>...</h2>  Contains the product's name.
+<p>...</p>  Contains the product's description.
+<span class="largetext">biggest</span>  Assigns the class "largetext" to the grouped text "biggest".
+<a href="#" class="product-button">  Assigns the class "product-button" to the sale page link.
+aria-label="..."  Adds descriptive link information for screen readers. Improves site accessibility. 
+-->
+            <article class="gallery-card">
+                <h2>MEGA-SPIKE 3000</h2>
+                <p>The <span class="largetext">biggest</span> spikes allowed by law!</p>
+                <a href="#" class="product-button"  aria-label="Shop the MEGA-SPIKE 3000 product page">Get MEGA-SPIKE 3000</a>
+            </article>
+            <article class="gallery-card">
+                <h2>Saguaro SPIKEmaster</h2>
+                <p>Spike in ALL THREE dimensions at ONCE!</p>
+                <a href="#" class="product-button" aria-label="Shop the Saguaro SPIKEmaster product page">Get Saguaro SPIKEmaster</a>
+            </article>
+            <article class="gallery-card">
+                <h2>Lil' SPIKEy</h2>
+                <p>Get them kids their OWN Cactusboat, for crying out loud!</p>
+                <a href="#" class="product-button" aria-label="Shop the Lil' SPIKEy product page">Get Lil' SPIKEy</a>
+            </article>
+            <article class="gallery-card">
+                <h2>Pennsylvania TurnSPIKE</h2>
+                <p>#1 when it comes to agility!<br>Designed by 1992 Spikeboat World Champion, Philly native Jennifred Gubbets.</p>
+                <a href="#" class="product-button" aria-label="Shop the Pennsylvania TurnSPIKE product page">Get Pennsylvania TurnSPIKE</a>
+            </article>
+        </section><!-- /.gallery-box -->
+
+    </main><!-- /.container --> 
+</body>
+
+</html>
